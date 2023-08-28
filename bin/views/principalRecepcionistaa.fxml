@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="719.0" prefWidth="1098.0" style="-fx-background-color: #679b9b;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.PrincipalRecepController">
+   <children>
+      <ImageView fitHeight="732.0" fitWidth="985.0" layoutX="-17.0" layoutY="-171.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../InterfazHotel/src/imagenes/Union11.png" />
+         </image>
+      </ImageView>
+  <AnchorPane layoutX="-253.0" layoutY="409.0" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+      <ImageView fitHeight="401.0" fitWidth="538.0" layoutX="763.0" layoutY="409.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../InterfazHotel/src/imagenes/4.png" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="719.0" prefWidth="1104.0">
+         <children>
+            <TabPane layoutX="53.0" layoutY="123.0" prefHeight="548.0" prefWidth="1000.0" style="-fx-background-color: #ffffff;" tabClosingPolicy="UNAVAILABLE">
+               <tabs>
+                  <Tab style="-fx-border-color: #afd755; -fx-background-color: #fffff0; -fx-font-family: &quot;Tw Cen MT&quot;;" text="Habitaciones">
+                     <content>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane layoutX="-17.0" prefHeight="493.0" prefWidth="1017.0" style="-fx-background-color: #ffffff;">
+                                 <children>
+                                    <DatePicker fx:id="datePicker" layoutX="50.0" layoutY="65.0" promptText="Date" style="-fx-background-color: #fffff0;" />
+                                    <Label layoutX="33.0" layoutY="26.0" text="Seleccione la fecha a buscar:" textFill="#afd755">
+                                       <font>
+                                          <Font name="Tw Cen MT Bold" size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <TableView fx:id="tableHabitaciones" layoutX="63.0" layoutY="129.0" prefHeight="354.0" prefWidth="205.0" style="-fx-font-family: &quot;Tw Cen MT&quot;; -fx-border-color: #65727c;">
+                                       <columns>
+                                          <TableColumn fx:id="columnNumeroH" prefWidth="202.0" text="HABITACIONES" />
+                                       </columns>
+                                    </TableView>
+                                    <Label layoutX="430.0" layoutY="14.0" text="Información de la habitación:" textFill="#afd755">
+                                       <font>
+                                          <Font name="Tw Cen MT Bold" size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <AnchorPane layoutX="337.0" layoutY="52.0" prefHeight="129.0" prefWidth="348.0" style="-fx-background-color: #fffff0; -fx-background-radius: 30 30 30 30;">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="85.0" text="Tipo de habitación:">
+                                             <font>
+                                                <Font name="Tw Cen MT Bold" size="22.0" />
+                                             </font>
+                                          </Label>
+                                          <ImageView fitHeight="69.0" fitWidth="65.0" layoutX="142.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../InterfazHotel/src/imagenes/habitacion.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label fx:id="labelTipoH" layoutX="197.0" layoutY="86.0" prefHeight="23.0" prefWidth="149.0">
+                                             <font>
+                                                <Font name="Tw Cen MT" size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="691.0" layoutY="52.0" prefHeight="129.0" prefWidth="214.0" style="-fx-background-color: #fffff0; -fx-background-radius: 30 30 30 30;">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="85.0" text="Número de Camas:">
+                                             <font>
+                                                <Font name="Tw Cen MT Bold" size="22.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="labelNroCamas" layoutX="197.0" layoutY="86.0" prefHeight="23.0" prefWidth="23.0">
+                                             <font>
+                                                <Font name="Tw Cen MT" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <ImageView fitHeight="64.0" fitWidth="61.0" layoutX="86.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../InterfazHotel/src/imagenes/cama.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="400.0" layoutY="188.0" prefHeight="129.0" prefWidth="305.0" style="-fx-background-color: #fffff0; -fx-background-radius: 30 30 30 30;">
+                                       <children>
+                                          <Label layoutX="26.0" layoutY="86.0" text="Estado:">
+                                             <font>
+                                                <Font name="Tw Cen MT Bold" size="22.0" />
+                                             </font>
+                                          </Label>
+                                          <ImageView fitHeight="69.0" fitWidth="65.0" layoutX="120.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../InterfazHotel/src/imagenes/productos-de-higiene.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label fx:id="labelEstado" layoutX="106.0" layoutY="87.0" prefHeight="23.0" prefWidth="183.0">
+                                             <font>
+                                                <Font name="Tw Cen MT" size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="715.0" layoutY="188.0" prefHeight="129.0" prefWidth="288.0" style="-fx-background-color: #fffff0; -fx-background-radius: 30 30 30 30;">
+                                       <children>
+                                          <Label layoutX="26.0" layoutY="86.0" text="Situación:">
+                                             <font>
+                                                <Font name="Tw Cen MT Bold" size="22.0" />
+                                             </font>
+                                          </Label>
+                                          <ImageView fitHeight="69.0" fitWidth="87.0" layoutX="110.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../InterfazHotel/src/imagenes/disponible.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label fx:id="labelSituacion" layoutX="120.0" layoutY="87.0" prefHeight="23.0" prefWidth="160.0">
+                                             <font>
+                                                <Font name="Tw Cen MT" size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <Label layoutX="436.0" layoutY="348.0" text="Seleccione el estado de la habitación" textFill="#afd755">
+                                       <font>
+                                          <Font name="Tw Cen MT Bold" size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="comboBox" layoutX="459.0" layoutY="392.0" prefHeight="33.0" prefWidth="200.0" promptText="..." style="-fx-background-color: #fffff0; -fx-border-color: #000000;" />
+                                    <Button fx:id="btnA" layoutX="721.0" layoutY="439.0" mnemonicParsing="false" onAction="#aEvent" prefHeight="38.0" prefWidth="140.0" style="-fx-background-color: #AFD755; -fx-background-radius: 30 30 30 30;" text="Cambiar" textFill="WHITE">
+                                       <font>
+                                          <Font name="Tw Cen MT" size="22.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </content></Tab>
+                  <Tab style="-fx-font-family: &quot;Tw Cen MT&quot;; -fx-border-color: #afd755; -fx-background-color: #fffff0;" text="Camas">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane layoutX="-1.0" prefHeight="507.0" prefWidth="1007.0" style="-fx-background-color: #ffffff;">
+                                 <children>
+                                    <Label layoutX="17.0" layoutY="14.0" text="Seleccione la fecha a buscar:" textFill="#afd755">
+                                       <font>
+                                          <Font name="Tw Cen MT Bold" size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <DatePicker fx:id="datepickerC" layoutX="39.0" layoutY="50.0" promptText="Date" style="-fx-background-color: #fffff0;" />
+                                    <TableView fx:id="tableCamas" layoutX="50.0" layoutY="270.0" prefHeight="215.0" prefWidth="229.0" style="-fx-background-color: #FFFFFF; -fx-font-family: &quot;Tw Cen MT&quot;; -fx-border-color: #65727c;">
+                                       <columns>
+                                          <TableColumn fx:id="columnNumeroC" prefWidth="227.0" text="CAMAS" />
+                                       </columns>
+                                    </TableView>
+                                    <AnchorPane layoutX="376.0" layoutY="195.0" prefHeight="129.0" prefWidth="322.0" style="-fx-background-color: #fffff0; -fx-background-radius: 30 30 30 30;">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="87.0" text="Estado de la cama:">
+                                             <font>
+                                                <Font name="Tw Cen MT Bold" size="22.0" />
+                                             </font>
+                                          </Label>
+                                          <ImageView fitHeight="69.0" fitWidth="81.0" layoutX="130.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../imagenes/esterilizacion.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label fx:id="labelEstadoC" layoutX="199.0" layoutY="88.0" prefHeight="23.0" prefWidth="145.0">
+                                             <font>
+                                                <Font name="Tw Cen MT" size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <Label layoutX="440.0" layoutY="24.0" text="Información de la cama:" textFill="#afd755">
+                                 <font>
+                                    <Font name="Tw Cen MT Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                              <AnchorPane layoutX="372.0" layoutY="62.0" prefHeight="129.0" prefWidth="310.0" style="-fx-background-color: #fffff0; -fx-background-radius: 30 30 30 30;">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="86.0" text="Tipo de cama:">
+                                       <font>
+                                          <Font name="Tw Cen MT Bold" size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="69.0" fitWidth="65.0" layoutX="70.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../imagenes/cama%20(2).png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="labelTipoC" layoutX="157.0" layoutY="86.0" prefHeight="23.0" prefWidth="148.0">
+                                       <font>
+                                          <Font name="Tw Cen MT" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="69.0" fitWidth="65.0" layoutX="194.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../imagenes/cama.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Line endX="-100.0" endY="67.0" layoutX="264.0" layoutY="13.0" startX="-100.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="701.0" layoutY="62.0" prefHeight="129.0" prefWidth="214.0" style="-fx-background-color: #fffff0; -fx-background-radius: 30 30 30 30;">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="85.0" text="Habitación #:">
+                                       <font>
+                                          <Font name="Tw Cen MT Bold" size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="labelNroHabitacion" layoutX="148.0" layoutY="86.0" prefHeight="23.0" prefWidth="41.0">
+                                       <font>
+                                          <Font name="Tw Cen MT" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="69.0" fitWidth="65.0" layoutX="62.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../InterfazHotel/src/imagenes/habitacion.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="725.0" layoutY="198.0" prefHeight="129.0" prefWidth="243.0" style="-fx-background-color: #fffff0; -fx-background-radius: 30 30 30 30;">
+                                 <children>
+                                    <Label layoutX="26.0" layoutY="86.0" text="Situación:">
+                                       <font>
+                                          <Font name="Tw Cen MT Bold" size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="64.0" fitWidth="61.0" layoutX="90.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../imagenes/disponible%20(1).png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="labelSituacionC" layoutX="120.0" layoutY="87.0" prefHeight="23.0" prefWidth="122.0">
+                                       <font>
+                                          <Font name="Tw Cen MT" size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <Label layoutX="446.0" layoutY="358.0" text="Seleccione el estado actual de la cama" textFill="#afd755">
+                                 <font>
+                                    <Font name="Tw Cen MT Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="comboBoxCamas" layoutX="469.0" layoutY="402.0" prefHeight="33.0" prefWidth="200.0" promptText="..." style="-fx-background-color: #fffff0; -fx-border-color: #000000;" />
+                              <Button fx:id="btnCambiarEstado" layoutX="731.0" layoutY="449.0" mnemonicParsing="false" onAction="#cambiarEstadoEvent" prefHeight="38.0" prefWidth="140.0" style="-fx-background-color: #AFD755; -fx-background-radius: 30 30 30 30;" text="Cambiar" textFill="WHITE">
+                                 <font>
+                                    <Font name="Tw Cen MT" size="22.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab style="-fx-background-color: #fffff0; -fx-border-color: #afd755; -fx-font-family: &quot;Tw Cen MT&quot;;" text="Reservas">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane prefHeight="515.0" prefWidth="1000.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="14.0" text="Verificar disponibilidad de habitaciones" textFill="#679b9b">
+                                       <font>
+                                          <Font name="Tw Cen MT Bold" size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <DatePicker fx:id="datePickerVerificarH" layoutX="38.0" layoutY="50.0" promptText="Date" style="-fx-background-color: #fffff0;" />
+                                    <Label layoutX="580.0" layoutY="12.0" text="Realizar reserva" textFill="#afd755">
+                                       <font>
+                                          <Font name="Tw Cen MT Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Line endX="-100.0" endY="503.0" layoutX="495.0" layoutY="-6.0" startX="-100.0" />
+                                    <DatePicker fx:id="datePickerFechaE" layoutX="416.0" layoutY="73.0" promptText="Date" style="-fx-background-color: #fffff0;" />
+                                    <DatePicker fx:id="datePickerFechaS" layoutX="669.0" layoutY="73.0" promptText="Date" style="-fx-background-color: #fffff0;" />
+                                    <Label layoutX="432.0" layoutY="50.0" prefHeight="23.0" prefWidth="148.0" text="Fecha de entrada">
+                                       <font>
+                                          <Font name="Tw Cen MT" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="692.0" layoutY="50.0" prefHeight="23.0" prefWidth="148.0" text="Fecha de salida">
+                                       <font>
+                                          <Font name="Tw Cen MT" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="30.0" fitWidth="29.0" layoutX="752.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../imagenes/reserva.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="412.0" layoutY="122.0" text="Seleccione la habitación " textFill="#679b9b">
+                                       <font>
+                                          <Font name="Tw Cen MT Bold" size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="comboBoxReserva" layoutX="428.0" layoutY="161.0" prefHeight="33.0" prefWidth="257.0" promptText="..." style="-fx-background-color: #fffff0; -fx-border-color: #000000;" />
+                                    <DatePicker fx:id="datePickerVerificarC" layoutX="38.0" layoutY="343.0" promptText="Date" style="-fx-background-color: #fffff0;" />
+                                    <Label layoutX="20.0" layoutY="309.0" text="Verificar disponibilidad de camas" textFill="#679b9b">
+                                       <font>
+                                          <Font name="Tw Cen MT Bold" size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="42.0" fitWidth="37.0" layoutX="48.0" layoutY="387.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../imagenes/cama%20(2).png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="52.0" fitWidth="43.0" layoutX="45.0" layoutY="424.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../imagenes/cama.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="labelDisponibilidadCD" layoutX="108.0" layoutY="394.0" prefHeight="23.0" prefWidth="243.0">
+                                       <font>
+                                          <Font name="Tw Cen MT" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="labelDisponibilidadIC" layoutX="108.0" layoutY="434.0" prefHeight="23.0" prefWidth="243.0">
+                                       <font>
+                                          <Font name="Tw Cen MT" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="52.0" fitWidth="53.0" layoutX="48.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../InterfazHotel/src/imagenes/habitacion.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="labelDisponibilidadD" layoutX="108.0" layoutY="111.0" prefHeight="23.0" prefWidth="243.0">
+                                       <font>
+                                          <Font name="Tw Cen MT" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="52.0" fitWidth="53.0" layoutX="48.0" layoutY="162.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../imagenes/cama-individual.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="labelDisponibilidadI" layoutX="119.0" layoutY="177.0" prefHeight="23.0" prefWidth="243.0">
+                                       <font>
+                                          <Font name="Tw Cen MT" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <AnchorPane layoutX="431.0" layoutY="204.0" prefHeight="282.0" prefWidth="534.0" style="-fx-background-color: #ffffff; -fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 ,10.0); -fx-background-radius: 30 30 30 30;">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="7.0" text="Información de la habitación seleccionada:" textFill="#afd755">
+                                             <font>
+                                                <Font name="Tw Cen MT Bold" size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="7.0" layoutY="52.0" prefHeight="23.0" prefWidth="187.0" text="Fecha de ingreso:">
+                                             <font>
+                                                <Font name="Tw Cen MT Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="7.0" layoutY="92.0" prefHeight="23.0" prefWidth="187.0" text="Fecha de salida:">
+                                             <font>
+                                                <Font name="Tw Cen MT Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="7.0" layoutY="130.0" prefHeight="23.0" prefWidth="187.0" text=" # de habitación:">
+                                             <font>
+                                                <Font name="Tw Cen MT Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="7.0" layoutY="196.0" prefHeight="23.0" prefWidth="187.0" text="Número de camas:">
+                                             <font>
+                                                <Font name="Tw Cen MT Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="7.0" layoutY="226.0" prefHeight="23.0" prefWidth="187.0" text="Total a pagar:">
+                                             <font>
+                                                <Font name="Tw Cen MT Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="labelFechaIngreso" layoutX="146.0" layoutY="52.0" prefHeight="23.0" prefWidth="187.0">
+                                             <font>
+                                                <Font name="Tw Cen MT" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="labelFechaSalida" layoutX="135.0" layoutY="92.0" prefHeight="23.0" prefWidth="187.0">
+                                             <font>
+                                                <Font name="Tw Cen MT" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="labelNumeroHReserva" layoutX="146.0" layoutY="130.0" prefHeight="23.0" prefWidth="187.0">
+                                             <font>
+                                                <Font name="Tw Cen MT" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="7.0" layoutY="161.0" prefHeight="23.0" prefWidth="162.0" text=" Tipo de habitación: ">
+                                             <font>
+                                                <Font name="Tw Cen MT Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="labelTipoHReserva" layoutX="161.0" layoutY="161.0" prefHeight="23.0" prefWidth="295.0">
+                                             <font>
+                                                <Font name="Tw Cen MT" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="labelNroCamasReserva" layoutX="161.0" layoutY="196.0" prefHeight="23.0" prefWidth="187.0">
+                                             <font>
+                                                <Font name="Tw Cen MT" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="labelTotalReserva" layoutX="124.0" layoutY="226.0" prefHeight="23.0" prefWidth="187.0">
+                                             <font>
+                                                <Font name="Tw Cen MT" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Button fx:id="btnReservar" layoutX="385.0" layoutY="219.0" mnemonicParsing="false" onAction="#ReservarEvent" prefHeight="40.0" prefWidth="121.0" style="-fx-background-color: #AFD755; -fx-background-radius: 30 30 30 30;" text="Reservar" textFill="WHITE">
+                                             <font>
+                                                <Font name="Tw Cen MT" size="22.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                    <ComboBox fx:id="comboBoxHabitacion" layoutX="758.0" layoutY="161.0" prefHeight="33.0" prefWidth="187.0" promptText="..." style="-fx-background-color: #fffff0; -fx-border-color: #000000;" />
+                                    <Label layoutX="723.0" layoutY="122.0" text="Habitaciones disponibles " textFill="#679b9b">
+                                       <font>
+                                          <Font name="Tw Cen MT Bold" size="22.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab style="-fx-border-color: afd755; -fx-background-color: #fffff0; -fx-font-family: &quot;Tw Cen MT&quot;;" text="Clientes">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="541.0" prefWidth="1000.0">
+                           <children>
+                              <AnchorPane layoutX="314.0" layoutY="113.0" prefHeight="586.0" prefWidth="407.0" style="-fx-background-color: #fffff0; -fx-background-radius: 30 30 30 30; -fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 ,10.0);">
+                                 <children>
+                                    <Label layoutX="24.0" layoutY="74.0" text="Datos personales" textFill="#afd755">
+                                       <font>
+                                          <Font name="Tw Cen MT Bold" size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtNombre" layoutX="8.0" layoutY="139.0" prefHeight="37.0" prefWidth="336.0" promptText="*Nombres" style="-fx-background-color: transparent; -fx-border-color: #aaaaaa; -fx-border-width: 0 0 1 0;">
+                                       <font>
+                                          <Font name="Tw Cen MT" size="19.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtCedula" layoutX="8.0" layoutY="183.0" prefHeight="37.0" prefWidth="336.0" promptText="*N° de Documento" style="-fx-background-color: transparent; -fx-border-color: #aaaaaa; -fx-border-width: 0 0 1 0;">
+                                       <font>
+                                          <Font name="Tw Cen MT" size="19.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtTelefono" layoutX="8.0" layoutY="228.0" prefHeight="37.0" prefWidth="336.0" promptText="*Telefono" style="-fx-background-color: transparent; -fx-border-color: #aaaaaa; -fx-border-width: 0 0 1 0;">
+                                       <font>
+                                          <Font name="Tw Cen MT" size="19.0" />
+                                       </font>
+                                    </TextField>
+                                    <Label layoutX="32.0" layoutY="393.0" text="Usuario">
+                                       <font>
+                                          <Font name="Tw Cen MT" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtDocumento" layoutX="32.0" layoutY="421.0" prefHeight="37.0" prefWidth="336.0" promptText="*N° de Documento" style="-fx-background-color: transparent; -fx-border-color: #aaaaaa; -fx-border-width: 0 0 1 0;">
+                                       <font>
+                                          <Font name="Tw Cen MT" size="19.0" />
+                                       </font>
+                                    </TextField>
+                                    <Label layoutX="32.0" layoutY="473.0" text="Contraseña">
+                                       <font>
+                                          <Font name="Tw Cen MT" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtContrasenia" layoutX="24.0" layoutY="494.0" prefHeight="37.0" prefWidth="336.0" promptText="*Contraseña" style="-fx-background-color: transparent; -fx-border-color: #aaaaaa; -fx-border-width: 0 0 1 0;">
+                                       <font>
+                                          <Font name="Tw Cen MT" size="19.0" />
+                                       </font>
+                                    </TextField>
+                                    <ImageView fitHeight="169.0" fitWidth="350.0" layoutX="17.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../InterfazHotel/src/imagenes/Imagen24.png" />
+                                       </image>
+                                    </ImageView>
+                                    <TextField fx:id="txtCorreo" layoutX="8.0" layoutY="281.0" prefHeight="37.0" prefWidth="336.0" promptText="*Correo" style="-fx-background-color: transparent; -fx-border-color: #aaaaaa; -fx-border-width: 0 0 1 0;">
+                                       <font>
+                                          <Font name="Tw Cen MT" size="19.0" />
+                                       </font>
+                                    </TextField>
+                                    <Button fx:id="btnCrearCliente" layoutX="115.0" layoutY="338.0" mnemonicParsing="false" onAction="#crearClienteEvent" prefHeight="32.0" prefWidth="122.0" style="-fx-background-color: #afd755; -fx-background-radius: 30 30 30 30; -fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 ,10.0);" text="Crear cliente" textFill="WHITE">
+                                       <font>
+                                          <Font name="Tw Cen MT" size="18.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                              <TextField fx:id="txtBuscarCliente" alignment="CENTER" layoutX="79.0" layoutY="23.0" onKeyPressed="#buscarEvent" prefHeight="43.0" prefWidth="877.0" promptText="Buscar Clientes" style="-fx-background-color: #FFFFF0; -fx-background-radius: 30 30 30 30; -fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 ,10.0);">
+                                 <font>
+                                    <Font name="Tw Cen MT" size="23.0" />
+                                 </font>
+                              </TextField>
+                              <ImageView fitHeight="32.0" fitWidth="36.0" layoutX="93.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../InterfazHotel/src/imagenes/lupa.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+            <ImageView fitHeight="89.0" fitWidth="215.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../InterfazHotel/src/imagenes/Imagen1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="97.0" fitWidth="557.0" layoutX="274.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../InterfazHotel/src/imagenes/1Imagen1.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnRegresar" layoutX="1036.0" layoutY="16.0" mnemonicParsing="false" onAction="#regresarEvent" prefHeight="27.0" prefWidth="54.0" style="-fx-background-color: #AFD755;" text="&lt;---">
+               <font>
+                  <Font name="Arial Narrow Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

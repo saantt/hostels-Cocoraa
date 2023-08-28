@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="719.0" prefWidth="1098.0" style="-fx-background-color: #679b9b;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.InicioController">
+   <children>
+      <Button fx:id="btnIngresarRecepcionista" layoutX="230.0" layoutY="665.0" mnemonicParsing="false" onAction="#ingresarRecepcionistaEvent" prefHeight="38.0" prefWidth="140.0" style="-fx-background-color: #AFD755; -fx-background-radius: 30 30 30 30;" text="Ingresar" textFill="WHITE">
+         <font>
+            <Font name="Tw Cen MT" size="22.0" />
+         </font>
+      </Button>
+      <AnchorPane prefHeight="96.0" prefWidth="1098.0" style="-fx-background-color: #fffff0; -fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 ,10.0);">
+         <children>
+            <ImageView fitHeight="93.0" fitWidth="231.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/Imagen1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="49.0" fitWidth="49.0" layoutX="914.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/colombia.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="ayuda" fitHeight="49.0" fitWidth="49.0" layoutX="979.0" layoutY="22.0" onMouseClicked="#ayudaEvent" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/informacion.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="105.0" layoutY="170.0" prefHeight="378.0" prefWidth="412.0" style="-fx-background-color: #ffffff; -fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 ,10.0); -fx-background-radius: 30 30 30;">
+         <children>
+            <ImageView fitHeight="409.0" fitWidth="412.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/Captura_de_pantalla_2023-08-23_231012-removebg-preview%20(1).png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="38.0" fitWidth="39.0" layoutX="263.0" layoutY="327.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/palmera-removebg-preview.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="605.0" layoutY="170.0" prefHeight="390.0" prefWidth="412.0" style="-fx-background-color: #ffffff; -fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 ,10.0); -fx-background-radius: 30 30 30;">
+         <children>
+            <ImageView fitHeight="390.0" fitWidth="412.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/muñeco-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="110.0" fitWidth="185.0" layoutX="133.0" layoutY="272.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/Imagen3.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Text fontSmoothingType="LCD" layoutX="82.0" layoutY="611.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inicia sesión para gestionar las reservas " textAlignment="CENTER">
+         <font>
+            <Font name="Tw Cen MT Bold" size="27.0" />
+         </font>
+      </Text>
+      <Text fontSmoothingType="LCD" layoutX="45.0" layoutY="647.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Acá podrás gestionar las reservas una vez inicies sesión" textAlignment="CENTER">
+         <font>
+            <Font name="Tw Cen MT" size="24.0" />
+         </font>
+      </Text>
+      <Text fontSmoothingType="LCD" layoutX="651.0" layoutY="612.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¡Bienvenid@ a Hostels cocora!" textAlignment="CENTER">
+         <font>
+            <Font name="Tw Cen MT Bold" size="27.0" />
+         </font>
+      </Text>
+      <Text fontSmoothingType="LCD" layoutX="499.0" layoutY="647.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER">
+         <font>
+            <Font name="Tw Cen MT" size="24.0" />
+         </font>
+      </Text>
+      <Text fontSmoothingType="LCD" layoutX="702.0" layoutY="647.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Click para iniciar a reservar " textAlignment="CENTER">
+         <font>
+            <Font name="Tw Cen MT" size="24.0" />
+         </font>
+      </Text>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fill="WHITE" layoutX="202.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingreso recepcionista">
+         <font>
+            <Font name="Tw Cen MT Condensed Bold" size="34.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="723.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingreso cliente">
+         <font>
+            <Font name="Tw Cen MT Condensed Bold" size="34.0" />
+         </font>
+      </Text>
+      <Button fx:id="btnIngresarCliente" layoutX="741.0" layoutY="665.0" mnemonicParsing="false" onAction="#ingresarClienteEvent" prefHeight="38.0" prefWidth="140.0" style="-fx-background-color: #AFD755; -fx-background-radius: 30 30 30 30;" text="Reservar" textFill="WHITE">
+         <font>
+            <Font name="Tw Cen MT" size="22.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

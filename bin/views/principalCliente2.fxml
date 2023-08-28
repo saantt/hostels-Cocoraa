@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="707.0" prefWidth="356.0" style="-fx-background-radius: 30 30 30 30;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.PrincipalCliente2Controller">
+   <children>
+      <ImageView fitHeight="730.0" fitWidth="374.0" layoutX="-1.0" layoutY="-11.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/Picsart_23-08-26_16-09-23-274.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="41.0" fitWidth="78.0" layoutX="238.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/Captura_de_pantalla_2023-08-26_163215-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ScrollPane layoutX="22.0" layoutY="123.0" prefHeight="547.0" prefWidth="315.0" style="-fx-background-color: #ffffff;">
+         <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="524.0" prefWidth="298.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="2.0" text="Información de la habitación " textFill="#afd755">
+                     <font>
+                        <Font name="Tw Cen MT Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="61.0" layoutY="26.0" text="seleccionada:" textFill="#afd755">
+                     <font>
+                        <Font name="Tw Cen MT Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="64.0" prefHeight="23.0" prefWidth="187.0" text="Fecha de ingreso:">
+                     <font>
+                        <Font name="Tw Cen MT Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="99.0" prefHeight="23.0" prefWidth="187.0" text="Fecha de salida:">
+                     <font>
+                        <Font name="Tw Cen MT Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="133.0" prefHeight="23.0" prefWidth="187.0" text=" # de habitación:">
+                     <font>
+                        <Font name="Tw Cen MT Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutY="171.0" prefHeight="23.0" prefWidth="162.0" text=" Tipo de habitación: ">
+                     <font>
+                        <Font name="Tw Cen MT Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="13.0" layoutY="207.0" prefHeight="23.0" prefWidth="187.0" text="Número de camas:">
+                     <font>
+                        <Font name="Tw Cen MT Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="13.0" layoutY="239.0" prefHeight="23.0" prefWidth="187.0" text="Total a pagar:">
+                     <font>
+                        <Font name="Tw Cen MT Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelFechaIngreso" layoutX="160.0" layoutY="64.0" prefHeight="23.0" prefWidth="187.0">
+                     <font>
+                        <Font name="Tw Cen MT" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelFechaSalida" layoutX="149.0" layoutY="99.0" prefHeight="23.0" prefWidth="187.0">
+                     <font>
+                        <Font name="Tw Cen MT" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelNumeroHReserva" layoutX="149.0" layoutY="133.0" prefHeight="23.0" prefWidth="78.0">
+                     <font>
+                        <Font name="Tw Cen MT" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelTipoHReserva" layoutX="149.0" layoutY="171.0" prefHeight="23.0" prefWidth="187.0">
+                     <font>
+                        <Font name="Tw Cen MT" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelNroCamasReserva" layoutX="162.0" layoutY="207.0" prefHeight="23.0" prefWidth="19.0">
+                     <font>
+                        <Font name="Tw Cen MT" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelTotalReserva" layoutX="123.0" layoutY="239.0" prefHeight="23.0" prefWidth="78.0">
+                     <font>
+                        <Font name="Tw Cen MT" size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnPagar" layoutX="121.0" layoutY="302.0" mnemonicParsing="false" onAction="#PagarEvent" prefHeight="40.0" prefWidth="78.0" style="-fx-background-color: #AFD755; -fx-background-radius: 30 30 30 30;" text="Pagar" textFill="WHITE">
+                     <font>
+                        <Font name="Tw Cen MT" size="18.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="50.0" fitWidth="128.0" layoutX="185.0" layoutY="477.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagenes/Imagen1.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="192.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagenes/marca-de-verificacion.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+      <Label layoutX="115.0" layoutY="58.0" text="¡Bienvenid@!">
+         <font>
+            <Font name="Tw Cen MT Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="86.0" text="Hostels Cocora esta para servirte.">
+         <font>
+            <Font name="Tw Cen MT" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="timeLabel" layoutX="42.0" layoutY="10.0" prefHeight="28.0" prefWidth="89.0">
+         <font>
+            <Font name="Arial Narrow Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
